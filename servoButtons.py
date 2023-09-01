@@ -30,14 +30,14 @@ button_state2 = False
 
 while True:
     pressed = pin.value
-    if pressed !=button_state:
+    if pin.value:
+        print("Left")
         for angle in range(0, 180, 5):  # 0 - 180 degrees, 5 degrees at a time.
             my_servo.angle = angle
             time.sleep(0.05)
-    else:
-        if pressed !=button_state2:
-            for angle in range(180, 0, -5): # 180 - 0 degrees, 5 degrees at a time.
-                my_servo.angle = angle
-                time.sleep(0.05)
-            else: pass
+    if pin2.value:
+        print("Right")
+        for angle in range(180, 0, -5): # 180 - 0 degrees, 5 degrees at a time.
+            my_servo.angle = angle
+            time.sleep(0.05)
     button_state = pressed
