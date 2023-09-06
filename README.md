@@ -1,4 +1,4 @@
-# CircuitPython
+# CircuitPython <!---->
 This repository will actually serve as an aid to help you get started with your own template.  You should copy the raw form of this readme into your own, and use this template to write your own.  If you want to draw inspiration from other classmates, feel free to check [this directory of all students!](https://github.com/chssigma/Class_Accounts).
 ## Table of Contents
 * [Table of Contents](#TableOfContents)
@@ -8,7 +8,7 @@ This repository will actually serve as an aid to help you get started with your 
 * [NextAssignmentGoesHere](#NextAssignment)
 ---
 
-## Hello_CircuitPython
+## Hello_CircuitPython <!---->
 
 ### Description & Code Snippets
 Write a couple sentences here, describing this assignment, and make sure that you hit these two points:
@@ -45,31 +45,16 @@ Then post an image here.   [here's a quick tutorial for all markdown code, like 
 ### Reflection
 Don't just tell the reader what went wrong or was challenging!  Describe how you figured it out, share the things that helped you succeed (tutorials, other people's repos, etc.), and then share what you learned from that experience.  **Your underlying goal for the reflection, is to concisely pass on the RIGHT knowledge that will help the reader recreate this assignment better or more easily.  Pass on your wisdom!**
 
-
-
-## CircuitPython_Servo
+## CircuitPython_Servo <!---->
 
 ### Description & Code Snippets
-Write a couple sentences here, describing this assignment, and make sure that you hit these two points:
-* What was the goal of the assignment?
-* How did you accomplish that goal?
-  How you accomplished the goal is NOT a reflection, it is you telling the reader how to do this assignment, in broad strokes.
+The goal of this asignment was to use two buttons to control the direction of a servo. This was the more significant initial endeavor into CircuitPython, as the code was not provided up front. I used code libraries provided by the examples folder we downloaded earlier this year, as well as internet examples, to help.
 
-  Your description is the right place to draw the reader's attention to any important chunks of code. Here's how you make code look like code:
+
+Using a button requires a lot more than Arduino did
 
 ```python
-# importing certian aspects to code
-import time
-import board # allow board to connect
-import pwmio # pulse width modulation: allow servo to comm with board
 import digitalio
-from adafruit_motor import servo # imports servo
-
-# initializes pulse width modulation and constraints concerning it on board
-pwm = pwmio.PWMOut(board.A2, duty_cycle=2 ** 15, frequency=50)
-
-# my_servo is initializes as servo variable
-my_servo = servo.Servo(pwm)
 
 # define pins for each button
 pin = digitalio.DigitalInOut(board.D1)
@@ -78,32 +63,14 @@ pin.pull = digitalio.Pull.UP
 
 button_state = False
 
-pin2 = digitalio.DigitalInOut(board.D2)
-pin2.direction = digitalio.Direction.INPUT
-pin2.pull = digitalio.Pull.UP
-
-button_state2 = False
-
-
 while True:
-    pressed = pin.value
     # if left button pressed
     if pin.value:
         print("Left")
-        for angle in range(0, 180, 5):  # 0 - 180 degrees, 5 degrees at a time.
-            my_servo.angle = angle
-            time.sleep(0.05)
-    # if right button pressed
-    if pin2.value:
-        print("Right")
-        for angle in range(180, 0, -5): # 180 - 0 degrees, 5 degrees at a time.
-            my_servo.angle = angle
-            time.sleep(0.05)
-    button_state = pressed
 ```
+Servo code is very similar to arduino, and not worth mentioning here.   If you want to see servo code, just click my code link below:
 
-**Lastly, please end this section with a link to your code or file.**  
-
+<a href="https://github.com/Raffi-Chen/engr3/blob/main/Servo.py"> Here is the link to the code displayed. </a>
 
 ### Evidence
 Pictures / Gifs of your finished work should go here.  You need to communicate what your thing does.
