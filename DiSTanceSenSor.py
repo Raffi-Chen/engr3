@@ -12,18 +12,21 @@ sonar = adafruit_hcsr04.HCSR04(trigger_pin=board.D5, echo_pin=board.D6)
 NUMPIXELS = 1
 BRIGHTNESS = 0.05
 PIN = board.NEOPIXEL
+GREEN = (0,255,0)
+RED = (255,0,0)
 
-pixel = neopixel.NeoPixel(PIN, NUMPIXELS, brightness=BRIGHTNESS, auto_write=False)
+pixel = neopixel.NeoPixel(PIN, NUMPIXELS, brightness=BRIGHTNESS)
 
 while True:
     try:
-        print(sonar.distance)
+        print(sonar.distance) 
+        if sonar.distance < 5: # red
+            pixel.fill(RED)
+        elif sonar.distance > 35: # green
+            pixel.fill((GREEN))
     except RuntimeError:
         print("Retrying!")
-    time.sleep(0.1)
-    if sonar.distance < 5: # red
-
-    if sonar.distance > 35: # green
+        time.sleep(0.5)
 
 
 ''' Neopixel code for reference
