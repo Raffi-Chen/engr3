@@ -1,15 +1,23 @@
-# CircuitPython <!---->
+
+
+
+
+
+# CircuitPython
 This repository will actually serve as an aid to help you get started with your own template.  You should copy the raw form of this readme into your own, and use this template to write your own.  If you want to draw inspiration from other classmates, feel free to check [this directory of all students!](https://github.com/chssigma/Class_Accounts).
 ## Table of Contents
 * [Table of Contents](#TableOfContents)
-* [RGBLED](#RGBLED)
+* [RGB LED](#RGBLED)
 * [CircuitPython Servo](#CircuitPythonServo)
-* [CircuitPython LCD](#CircuitPythonLCD)
+* [Distance Sensor](#DistanceSensor)
 * [NextAssignmentGoesHere](#NextAssignment)
 ---
 
-## RGBLED <!---->
 
+
+
+
+## RGBLED
 
 ### Description & Code Snippets
 The purpose of this assignment was to use the neopixel in the microcontroller to rotate between the colors of the rainbow. To go about this assignment, I used a code library and edited it accordingly.
@@ -42,8 +50,11 @@ There is no wiring diagram for this assignment, as the neopixel is already integ
 ### Reflection
 Before we started this assignment, we were not given any code or wiring. That didn't work well, as conversion from Arduino to CircuitPython can be painful and can not be translated word for word. However, Mr. Helmstetter soon realized that that was a quite difficult starting point in CircuitPython, and we were instead told to use the neopixel on the Metro board as well as the code given on the CircuitPython library. That definitely did make things much easier, but it didn't completely get rid of every single difficulty. First of all, the NUMPIXELS value in the variables needed to be changed to match the Metro. Although this is not a difficult thing to change, I didn't understand what it meant and tried many values. The speed and brightness values were self-explanatory, but the PIN value was confusing because I had to say board.NEOPIXEL rather than any pin actually on the board. In this aspect, I got help from classmates to get to my solution. While documenting it, I found that my colors couldn't change normally! This was due to the fact that the neopixel aspect of the board was not integrated into my GitHub library, and worked afterwards.
 
-## CircuitPythonServo <!---->
 
+
+
+
+## CircuitPythonServo
 
 ### Description & Code Snippets
 The goal of this asignment was to use two buttons to control the direction of a servo. This was the more significant initial endeavor into CircuitPython, as the code was not provided up front. I used code libraries provided by the examples folder we downloaded earlier this year, as well as internet examples, to help.
@@ -81,7 +92,11 @@ For the wiring diagrams, I used <a href="tinkercad.com">TinkerCAD</a>.
 ### Reflection
 Although the wiring was easy due to the exact sameness to Arduino wiring, this assignment was difficult in terms of code due to my inexperience in CircuitPython. Initially, I attempted to copy it word for word from Arduino. I soon discovered that not all commands were the same as Arduino and couldn't be translated exactly, just as English can't be translated word for word to French. For example, you need to import the board to the code in CircuitPython, something that was implied in Arduino. However, I eventually found a few examples in the Adafruit CircuitPython library, and including <a href="https://learn.adafruit.com/circuitpython-essentials/circuitpython-servo">this sketch</a> on servos on CircuitPython (where PWM needs to be integrated with a simple line of command that does all the work for you, and then for statements are needed to actually set servo values) and <a href="https://learn.adafruit.com/multi-tasking-with-circuitpython/buttons">this sketch</a> on buttons (where many of the functions are similar to Arduino but need colons instead of curly brackets, and need to be initiated with digitalio.)
 
-## CircuitPythonLCD
+
+
+
+
+## DistanceSensor
 
 ### Description & Code Snippets
 Write a couple sentences here, describing this assignment, and make sure that you hit these two points:
