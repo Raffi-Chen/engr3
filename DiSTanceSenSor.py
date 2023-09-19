@@ -32,7 +32,7 @@ while True:
             pixel.fill(255,0,0)
         elif DIST > 5 and DIST < 20:
             pixel.fill(RED1,0,BLUE1)
-        elif DIST = 20:
+        elif DIST == 20: # blue
             pixel.fill(0,0,255)
         elif DIST > 20 and DIST < 35:
             pixel.fill(0,GREEN2,BLUE2)
