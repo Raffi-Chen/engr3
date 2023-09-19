@@ -10,38 +10,42 @@ import simpleio
 
 sonar = adafruit_hcsr04.HCSR04(trigger_pin=board.D5, echo_pin=board.D6)
 
-DIST = sonar.distance
-MAP = simpleio.map_range
 
 NUMPIXELS = 1
 BRIGHTNESS = 0.05
 PIN = board.NEOPIXEL
-RED1 = MAP(DIST,255,0,5,20)
-BLUE1 = MAP(DIST,0,255,5,20)
-GREEN2 = MAP(DIST,0,255,20,35)
-BLUE2 = MAP(DIST,255,0,20,35)
-
-# map function: simpleio.map_range(x,in_min,in_max,out_min,out_max)
 
 pixel = neopixel.NeoPixel(PIN, NUMPIXELS, brightness=BRIGHTNESS)
 
+
 while True:
+
     try:
+
+        DIST = sonar.distance
+        MAP = simpleio.map_range
+        RED1 = MAP(DIST,5,20,255,0)
+        BLUE1 = MAP(DIST,5,20,0,255)
+        GREEN2 = MAP(DIST,20,35,0,255)
+        BLUE2 = MAP(DIST,20,35,255,0)
+         # map function: simpleio.map_range(x,in_min,in_max,out_min,out_max)
+
         print(DIST) 
         if DIST < 5: # red
-            pixel.fill(255,0,0)
+            pixel.fill((255,0,0))
         elif DIST > 5 and DIST < 20:
-            pixel.fill(RED1,0,BLUE1)
+            pixel.fill((RED1,0,BLUE1))
         elif DIST == 20: # blue
-            pixel.fill(0,0,255)
+            pixel.fill((0,0,255))
         elif DIST > 20 and DIST < 35:
-            pixel.fill(0,GREEN2,BLUE2)
+            pixel.fill((0,GREEN2,BLUE2))
         elif DIST > 35: # green
-            pixel.fill(0,255,0)
+            pixel.fill((0,255,0))
+        pixel.show()
 
     except RuntimeError:
+
         print("Retrying!")
-        time.sleep(0.5)
 
 
 ''' Neopixel code for reference
