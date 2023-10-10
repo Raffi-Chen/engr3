@@ -3,7 +3,7 @@
 
 
 
-# CircuitPython
+# CircuitPython AND Onshape
 This repository will actually serve as an aid to help you get started with your own template.  You should copy the raw form of this readme into your own, and use this template to write your own.  If you want to draw inspiration from other classmates, feel free to check [this directory of all students!](https://github.com/chssigma/Class_Accounts).
 ## Table of Contents
 * [Table of Contents](#TableOfContents)
@@ -11,6 +11,8 @@ This repository will actually serve as an aid to help you get started with your 
 * [CircuitPython Servo](#CircuitPythonServo)
 * [Distance Sensor](#DistanceSensor)
 * [Motor Control](#MotorControl)
+* [The Hanger - ONSHAPE](#TheHanger)
+* [Swing Arm - ONSHAPE](#SwingArm)
 * [NextAssignmentGoesHere](#NextAssignment)
 ---
 
@@ -182,6 +184,48 @@ I used [tinkercad.com](https://www.tinkercad.com/learn/circuits) for wiring. Not
 ### Reflection
 At the start of this assignment, complicated wiring needed to be figured out. This was provided by the Canvas assignment, however, it was still troublesome. Even though I could easily understand a wire with multiple branches on the wiring diagram, I got confused quickly as to where I was. This eventually led me to make my wiring diagram <i>first</i>, making it simpler to understand immediately (this is using your own documentation to help yourself in the process!) After the extremely tedious wiring stage that spanned a few days due to its complexity (despite having many comprehendable small sections), I got started on the code and got lost immediately, even to the tips to follow analogio and pwmio, subsequently followed by a motor.duty_cycle command, were quite straightforward. My code is generally self explanatory now that I look at it, however, there are several strange problems I ran into. Initially, I used A3 instead of D3 to denote my motor pin, showing how important it is to reread through your code carefully. My potentiometer was reading astonishingly low numbers such as 1300, whereas the maximum values should have been around 65000. We then realized that the potentiometer was missing a pin, deeming it unusable. This definitely shows how many faults in Arduino could be beyond our control! Finally, my code was initially reading too many outliers, and I solved this simply by firming the position of the pins in relation to where they were plugged into. The errors in this assignment did seem quite random, however, they made me realize how cruicial it is to check all components of a project/assignment that could be malfunctioning. Another thing I see thoroughout all learning: you never learn until you're finished, when you see that something works. That's the way "learning by doing" effectively happens in all Engineering classes here.
 <br><br><br>
+
+
+
+
+
+## TheHanger
+
+### Assignment Description
+This was an Onshape practice sketch, so the purpose was just to copy off the components of the sketch. This sketch which was to be made is apparently known as "The Hanger," which appears to be a bridge-like shape that can hang objects. According to Mr. Miller, though, the function of the item is to improve your Onshape skills.
+
+### Evidence
+<img src="https://github.com/Raffi-Chen/engr3/assets/143544930/6616e690-ea7f-47b5-8009-b17f7dc185fd" height="400"><br>
+Full isometric view of part<br>
+<img src="https://github.com/Raffi-Chen/engr3/assets/143544930/d66a313d-7e26-46a4-ad0c-fa721ac2f842" height="400"><br>
+Farther right view, to see holes and specifications more easily<br>
+
+### Part Link 
+<a href="https://cvilleschools.onshape.com/documents/865f96fed0da609fd9c53ca2/w/2d679a4153164281520fe900/e/57a5a1dd18376062231b898a?renderMode=0&uiState=6525a21d2b7a2b2847f0aaf6">Link to document can be found here.</a> 
+
+### Reflection
+This assignment was inherently challenging despite its simplicity, because I don't really have much practice with Onshape part practice. Although I have done some part challenges in the past, they were <a href="https://cvilleschools.onshape.com/documents/fa13f1659452ebd4119a46b0/w/29409880bc5d85d5be054b02/e/5c57b97836a4be618a435484?renderMode=0&uiState=6525a33d8570735bdd0fa77b">much simpler</a> and could be figured out much more quickly, due to their lack of necessity for mulitiple views. I decided to work from one of the long sides according to the <a href="https://cvilleschools.onshape.com/documents/865f96fed0da609fd9c53ca2/w/2d679a4153164281520fe900/e/536561e7e301dfd13b628e8a">reference I was working off of. This could be easily figured out, however, I needed to figure out a few simple tricks, such as starting off with only the left side so I can mirror the entire thing later. Another thing I needed to figure out was how much to fillet each section that was filleted. This is represented by using the fillet feature (e.g. for the 8 corresponding areas in 8x R8). I also learned to use the hole feature according to the schematic. This is done when a hole around a certain point has many features around it, and can be made by changing the features according to what is defined by the hole function on the schematic.
+
+
+
+
+
+## SwingArm
+
+### Assignment Description
+Like the last assignment, the purpose was simply to copy off the sketches given to make a more complex part off of these drawings. One difficulty was the presence of different dimensions on different sketches, which can test understanding of cutouts and dimensions from different views. However, there was also more help in this assignment in a video from Mr. Miller.
+
+### Evidence
+<img src="https://github.com/Raffi-Chen/engr3/assets/143544930/d701157f-250c-4805-94d7-10b420760163" height="400"><br>
+Full isometric view of part<br>
+<img src="https://github.com/Raffi-Chen/engr3/assets/143544930/dfe05f6d-26a5-4068-9dfd-6a65e0db6148" height="400"><br>
+Top view to see detail of section 
+
+### Part Link 
+<a href="https://cvilleschools.onshape.com/documents/87bffe9447026db45f302eb6/w/6d108b8a0e10725d961a7657/e/c86c69a80590d6f2071d9697?renderMode=0&uiState=6525a8937e5e2c1b5651cb35">Link to document can be found here.</a>
+
+### Reflection
+I had lots more trouble on this assignment than the previous one, mainly because it was extremely difficult to make sense of the different views of the Swing Arm. Inititally, I based my drawing fully off of the <a href="https://cvilleschools.onshape.com/documents/87bffe9447026db45f302eb6/w/6d108b8a0e10725d961a7657/e/35e31da1f85bda7b169e2f7c">front view</a> (or more lika a single perspective on the front view). This excluded many essential components: all aspects of the lengths of each dimension. This crazy drawing was not coherent in places, did not look very close to the actual drawing, and did not follow many of the correct dimensions. (I could take a very long time to describe the faults of this sketch, and frankly, I can't remember them either.) After the huge magnitude of problems with it, I decided I needed to start the assignment over and saw the video, which guided on every step of the assignment. This helped me realize that sometimes, it's more important to go the suggested direction than an apparently useful direction (getting it right the first time). In the end, I didn't learn much more than was obvious the first time: look at all the information you are given and use it to your advantage, as everything is there for a reason. However, I learned from the simplicity of this assignment that sometimes, taking shortcuts is too evasive and doesn't work to result in the desired product.
 
 
 
