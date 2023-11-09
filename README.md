@@ -13,7 +13,8 @@ This repository will actually serve as an aid to help you get started with your 
 * [Motor Control](#MotorControl)
 * [The Hanger - ONSHAPE](#TheHanger)
 * [Swing Arm - ONSHAPE](#SwingArm)
-* [Multipart Design - ONSHAPE](#MultipartDesign)
+* [Multipart Cylinder - ONSHAPE](#MultipartCylinder)
+* [V Block - ONSHAPE](#VBlock)
 ---
 
 
@@ -148,7 +149,6 @@ https://github.com/Raffi-Chen/engr3/assets/143544930/bc7d8c38-34e1-43e1-b842-2ad
 For the wiring diagrams, I used <a href="tinkercad.com">TinkerCAD</a>. Also, I used a Metro Express instead of an Arduino Uno.
 
 ### Reflection
-
 I went through this assignment step by step, exactly as it was displayed on the assignment. <br><br>
 Step 1 was to initiate the distance sensor with CircuitPython, by which I could make use of <a href="https://github.com/adafruit/Adafruit_CircuitPython_HCSR04/blob/main/examples/hcsr04_simpletest.py">Adafruit library code</a> on. On this step, I felt as if I were simply having trouble because the distance sensor was drawing too much energy from the Metro. Eventually, Mr. Helmstetter realized that it was the circumstances of the current version of CircuitPython (v 8) didn't support distance sensors well, and everyone in the class switched to version 7.<br><br>
 Step 2 was to get the neopixel to change red at less than 5 cm and green at more than 35 cm. I had relatively less trouble on this stage, but I still had to reference the previous neopixel code for a while to remember the ins and outs of CircuitPython. This displays the importance of documentation.<br><br>
@@ -231,7 +231,7 @@ I had lots more trouble on this assignment than the previous one, mainly because
 
 
 
-## MultipartDesign
+## MultipartCylinder
 
 ### Assignment Description
 This assignment's concept is essentially the same as the other Onshape assignments so far this year - you get a few concept sketches, and use them to create your own sketches in Onshape. However, here, it is slightly more challenging as there are several parts, hence the name "Multi Part Design Practice."
@@ -251,6 +251,25 @@ I started at the bottom cap (even though the first denoted item was the top cap)
 
 
 
+
+## VBlock
+
+### Assignment Description
+All of the Onshape Certification Prep assignments are essentially have the same, as the process in all of them is to follow a diagram and copy them to result in a final product that is based off of the picture. This one is another single part, which takes much shorter than the multipart designs.
+
+### Evidence
+<img src="https://github.com/Raffi-Chen/engr3/assets/143544930/25694afd-c356-4684-b010-b3834a1b7f94" height="800"><br>
+Isometric view of part<br>
+<img src="https://github.com/Raffi-Chen/engr3/assets/143544930/ca49ab1c-ada1-4589-b7dc-c0d28ab1843a" height="800"><br>
+Left/right view of part showing hole at bottom of block and depths of extrudes
+
+### Part Link 
+<a href="https://cvilleschools.onshape.com/documents/2b59c857ec3c50dd56544ca0/w/0fc1db2b5e7b3144fddd3604/e/f612ee2e70fc0aa9dc2b8385?renderMode=0&uiState=654d426ac4afc47628f07f0b">Link to part document</a>
+
+### Reflection
+This one was a lot easier than the past multipart assignment, partially because it was intended to be done in half the amount of time. However, the schematic of this one was much easier to comprehend, as it didn't show a full assembly in one picture. This led to the feeling of the content being much less overwhelming, as since they only give you the essential information, you have to comprehend what is given but not emphasized. In this sketch, however, not much is emphasized, as there are only three sides to focus on rather than the 10 pages of the multipart cylinder assignment. Despite its ease, I did have a slight amount of problems with it. First of all, I did not know where to begin, and eventually started by literally drawing one side of the front with lines. This did work, however, I had to use the trick to adjust blue lines (by moving around the unconstrained points and finding where everything is) to eventually get to the schematic depicted on the diagram.
+
+This is supposed to be completed in 30 minutes in the Onshape certification. So far, it is taking me around 50.
 
 <!--
 
@@ -289,23 +308,18 @@ ONSHAPE
 ## Onshape_Assignment_Template
 
 ### Assignment Description
-
 Write your assignment description here. What is the purpose of this assignment? It should be at least a few sentences.
 
 ### Evidence
-
 Take several cropped screenshots of your Onshape document from different angles. Try to capture all important aspects of the design. Turn off overlays that obscure the parts, such as planes or mate connectors. Your images should have captions, so the reader knows what they are looking at!  
 
 ### Part Link 
-
 [Create a link to your Onshape document](https://cvilleschools.onshape.com/documents/003e413cee57f7ccccaa15c2/w/ea71050bb283bf3bf088c96c/e/c85ae532263d3b551e1795d0?renderMode=0&uiState=62d9b9d7883c4f335ec42021). Don't forget to turn on link sharing in your Onshape document so that others can see it. 
 
 ### Reflection
-
 What went wrong / was challenging, how'd you figure it out, and what did you learn from that experience? Your goal for the reflection is to pass on knowledge that will make this assignment better or easier for the next person. Think about your audience for this one, which may be "future you" (when you realize you need some of this code in three months), me, or your college admission committee!
 
 -->
-<br><br><br>
 
 <!--References for commonly used sources-->
 <!--For the wiring diagrams, I use <a href="tinkercad.com">TinkerCAD</a>.-->
