@@ -260,8 +260,8 @@ All of the Onshape Certification Prep assignments are essentially have the same,
 ### Evidence
 <img src="https://github.com/Raffi-Chen/engr3/assets/143544930/25694afd-c356-4684-b010-b3834a1b7f94" height="800"><br>
 Isometric view of part<br>
-<img src="https://github.com/Raffi-Chen/engr3/assets/143544930/ca49ab1c-ada1-4589-b7dc-c0d28ab1843a" height="800"><br>
-Left/right view of part showing hole at bottom of block and depths of extrudes
+<img src="https://github.com/Raffi-Chen/engr3/assets/143544930/ca49ab1c-ada1-4589-b7dc-c0d28ab1843a" height="400"><br>
+Left/right view of part showing hole at bottom of block and depths of extrudes<br>
 
 ### Part Link 
 <a href="https://cvilleschools.onshape.com/documents/2b59c857ec3c50dd56544ca0/w/0fc1db2b5e7b3144fddd3604/e/f612ee2e70fc0aa9dc2b8385?renderMode=0&uiState=654d426ac4afc47628f07f0b">Link to part document</a>
