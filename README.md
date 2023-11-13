@@ -286,7 +286,7 @@ Same with the previous assignment, the purpose of this assignment is to create a
 Isometric view of part<br>
 
 ### Part Link 
-<a href="https://cvilleschools.onshape.com/documents/6531d2b5a342156cd69f113a/w/bdf0eeb5d408de85b6940585/e/6ea9ebaac577032a790e9f0a?renderMode=0&uiState=65528c6d6c67f86fd5900617>Link to part</a>
+<a href="https://cvilleschools.onshape.com/documents/6531d2b5a342156cd69f113a/w/bdf0eeb5d408de85b6940585/e/6ea9ebaac577032a790e9f0a?renderMode=0&uiState=65528c6d6c67f86fd5900617">Link to part</a>
 
 ### Reflection
 This piece was much easier than the other Onshape challenges so far, as it was a single part rather than a multi part. However, I did have some challenges on it despite its short time to complete. I initially thought that the part was symmetric, which it wasn't. However, only the ones that were consistent on both sides were symmetric, meaning the semicircles on both sides. However, the center oval is not symmetric, so you have to draw everything to be set to keep this in mind. This requires a lot more manual dimensioning, however, it is necessary for the awkward positioning of these parts.
