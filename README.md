@@ -7,14 +7,15 @@
 This repository will actually serve as an aid to help you get started with your own template.  You should copy the raw form of this readme into your own, and use this template to write your own.  If you want to draw inspiration from other classmates, feel free to check [this directory of all students!](https://github.com/chssigma/Class_Accounts).
 ## Table of Contents
 * [Table of Contents](#TableOfContents)
-* [RGB LED](#RGBLED)
-* [CircuitPython Servo](#CircuitPythonServo)
-* [Distance Sensor](#DistanceSensor)
-* [Motor Control](#MotorControl)
-* [The Hanger - ONSHAPE](#TheHanger)
-* [Swing Arm - ONSHAPE](#SwingArm)
-* [Multipart Cylinder - ONSHAPE](#MultipartCylinder)
-* [V Block - ONSHAPE](#VBlock)
+* [Arduino: RGB LED](#RGBLED)
+* [Arduino: CircuitPython Servo](#CircuitPythonServo)
+* [Arduino: Distance Sensor](#DistanceSensor)
+* [Arduino: Motor Control](#MotorControl)
+* [Onshape: The Hanger](#TheHanger)
+* [Onshape: Swing Arm](#SwingArm)
+* [Onshape: Multipart Cylinder](#MultipartCylinder)
+* [Onshape: V Block](#VBlock)
+* [Onshape: Alignment Plate](#AlignmentPlate)
 ---
 
 
@@ -201,7 +202,7 @@ Full isometric view of part<br>
 Farther right view, to see holes and specifications more easily<br>
 
 ### Part Link 
-<a href="https://cvilleschools.onshape.com/documents/865f96fed0da609fd9c53ca2/w/2d679a4153164281520fe900/e/57a5a1dd18376062231b898a?renderMode=0&uiState=6525a21d2b7a2b2847f0aaf6">Link to document can be found here.</a> 
+<a href="https://cvilleschools.onshape.com/documents/865f96fed0da609fd9c53ca2/w/2d679a4153164281520fe900/e/57a5a1dd18376062231b898a?renderMode=0&uiState=65528bca19ebf955f955940f">Link to part</a>
 
 ### Reflection
 This assignment was inherently challenging despite its simplicity, because I don't really have much practice with Onshape part practice. Although I have done some part challenges in the past, they were <a href="https://cvilleschools.onshape.com/documents/fa13f1659452ebd4119a46b0/w/29409880bc5d85d5be054b02/e/5c57b97836a4be618a435484?renderMode=0&uiState=6525a33d8570735bdd0fa77b">much simpler</a> and could be figured out much more quickly, due to their lack of necessity for mulitiple views. I decided to work from one of the long sides according to the <a href="https://cvilleschools.onshape.com/documents/865f96fed0da609fd9c53ca2/w/2d679a4153164281520fe900/e/536561e7e301dfd13b628e8a">reference I was working off of.</a> This could be easily figured out, however, I needed to figure out a few simple tricks, such as starting off with only the left side so I can mirror the entire thing later. Another thing I needed to figure out was how much to fillet each section that was filleted. This is represented by using the fillet feature (e.g. for the 8 corresponding areas in 8x R8). I also learned to use the hole feature according to the schematic. This is done when a hole around a certain point has many features around it, and can be made by changing the features according to what is defined by the hole function on the schematic.
@@ -244,7 +245,7 @@ This shows everything that is necessary for the symmetric nature of this sketch.
 [Link to part document](https://cvilleschools.onshape.com/documents/6b327a7fb8f7e4e606ec952c/w/5c49851c2f817853adb06a8c/e/175822094156ab05b063f33c).
 
 ### Reflection
-I always say everything was "hard" on my reflections, and for a good reason. Each Engineering assignment isn't designed as busywork to give you work, but rather as something to help you grow on one new aspect. And this assignment is no different: the multi-part aspect really gave me something to work on. Well, honestly, it looked much more impressive than it actually was difficult, but its symmetric nature really intimidated me because of all the parts. The design intent included a full assembly on all of the parts, but all it did was boggle my concept of the part even more as I couldn't understand how it related to the isometric view (even though it very much did). Also, the design intent was spread out over two pages to disperse the information and make it easier to read, confusing me even more. The fact that the first question's pdf was 10 pages long also astonished me. However, I decided to simply force myself to work through it, hoping it would make sense later.
+I always say everything is "hard" on my reflections, and for a good reason. Each Engineering assignment isn't designed as busywork to give you work, but rather as something to help you grow on one new aspect. And this assignment is no different: the multi-part aspect really gave me something to work on. Well, honestly, it looked much more impressive than it actually was difficult, but its symmetric nature really intimidated me because of all the parts. The design intent included a full assembly on all of the parts, but all it did was boggle my concept of the part even more as I couldn't understand how it related to the isometric view (even though it very much did). Also, the design intent was spread out over two pages to disperse the information and make it easier to read, confusing me even more. The fact that the first question's pdf was 10 pages long also astonished me. However, I decided to simply force myself to work through it, hoping it would make sense later.
 
 I started at the bottom cap (even though the first denoted item was the top cap), and while the specific parts themselves were only moderately difficult, the assembly all together was confusing. For example, when I started to calculate the masses of each parts, then I realized that I didn't interconnect all of the parts. When dimensions have parentheses around them, it means that they are taken from a reference and not from the actual dimension tool. I neglected this idea and started to get strange looks when changing dimensions for the other question. Then, I spent an extremely long time adjusting it (honestly doing it right the first time has its perks, especially with the time constraints). After all this, I still had some mistakes, realizing that I accidentally mistyped some of the dimensions. This lead me to realize the importance of double checking work, so that you don't do something slightly wrong. After all, just like in math, the end product (in this case the math) is what you need to get the question right, not the work. Another thing that influenced the mass, which I had to go back and fix, was their devious changing of materials at the bottom right on question 4. This shows the importance of looking at the specific aspects of the diagrams, even if they seem small and insignificant.
 
@@ -264,12 +265,35 @@ Isometric view of part<br>
 Left/right view of part showing hole at bottom of block and depths of extrudes<br>
 
 ### Part Link 
-<a href="https://cvilleschools.onshape.com/documents/2b59c857ec3c50dd56544ca0/w/0fc1db2b5e7b3144fddd3604/e/f612ee2e70fc0aa9dc2b8385?renderMode=0&uiState=654d426ac4afc47628f07f0b">Link to part document</a>
+<a href="https://cvilleschools.onshape.com/documents/2b59c857ec3c50dd56544ca0/w/0fc1db2b5e7b3144fddd3604/e/2d713f247c81db7b9c473bec">Link to part document</a>
 
 ### Reflection
 This one was a lot easier than the past multipart assignment, partially because it was intended to be done in half the amount of time. However, the schematic of this one was much easier to comprehend, as it didn't show a full assembly in one picture. This led to the feeling of the content being much less overwhelming, as since they only give you the essential information, you have to comprehend what is given but not emphasized. In this sketch, however, not much is emphasized, as there are only three sides to focus on rather than the 10 pages of the multipart cylinder assignment. Despite its ease, I did have a slight amount of problems with it. First of all, I did not know where to begin, and eventually started by literally drawing one side of the front with lines. This did work, however, I had to use the trick to adjust blue lines (by moving around the unconstrained points and finding where everything is) to eventually get to the schematic depicted on the diagram.
 
 This is supposed to be completed in 30 minutes in the Onshape certification. So far, it is taking me around 50.
+
+
+
+
+
+## AlignmentPlate
+
+### Assignment Description
+Same with the previous assignment, the purpose of this assignment is to create a single part based on a design schematic. This one is provided by the CAD Challenges extension.
+
+### Evidence
+<img src="https://github.com/Raffi-Chen/engr3/assets/143544930/261a6ade-389d-4145-b8ae-dea80ba85dc0" height="500"><br>
+Isometric view of part<br>
+
+### Part Link 
+<a href="https://cvilleschools.onshape.com/documents/6531d2b5a342156cd69f113a/w/bdf0eeb5d408de85b6940585/e/6ea9ebaac577032a790e9f0a?renderMode=0&uiState=65528c6d6c67f86fd5900617>Link to part</a>
+
+### Reflection
+This piece was much easier than the other Onshape challenges so far, as it was a single part rather than a multi part. However, I did have some challenges on it despite its short time to complete. I initially thought that the part was symmetric, which it wasn't. However, only the ones that were consistent on both sides were symmetric, meaning the semicircles on both sides. However, the center oval is not symmetric, so you have to draw everything to be set to keep this in mind. This requires a lot more manual dimensioning, however, it is necessary for the awkward positioning of these parts.
+
+
+
+
 
 <!--
 
