@@ -295,6 +295,28 @@ This piece was much easier than the other Onshape challenges so far, as it was a
 
 
 
+## MicrophoneStand
+
+### Assignment Description
+This is another multipart assignment in which you simply follow the sketches in order to eventually achieve a certain result, in this case, a microphone stand (hence the name) which is modified through subsequent questions.
+
+### Evidence
+![Assembly 1](https://github.com/Raffi-Chen/engr3/assets/143544930/b39da8e0-ef14-4278-8cd4-80cd8a445347)
+![Assembly 1 (1)](https://github.com/Raffi-Chen/engr3/assets/143544930/954c5c33-7bc0-488c-8717-da05116c5e0c)
+![Assembly 1 (2)](https://github.com/Raffi-Chen/engr3/assets/143544930/0b8317ff-8d88-4a76-a71c-c8cef708a2ad)
+
+
+### Part Link 
+[Create a link to your Onshape document](https://cvilleschools.onshape.com/documents/003e413cee57f7ccccaa15c2/w/ea71050bb283bf3bf088c96c/e/c85ae532263d3b551e1795d0?renderMode=0&uiState=62d9b9d7883c4f335ec42021). Don't forget to turn on link sharing in your Onshape document so that others can see it. 
+
+### Reflection
+What went wrong / was challenging, how'd you figure it out, and what did you learn from that experience? Your goal for the reflection is to pass on knowledge that will make this assignment better or easier for the next person. Think about your audience for this one, which may be "future you" (when you realize you need some of this code in three months), me, or your college admission committee!
+
+
+
+
+
+
 <!--
 
 ARDUINO
