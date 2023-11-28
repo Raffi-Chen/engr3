@@ -1,4 +1,8 @@
-
+<!--<style>
+    a {
+        target="_blank";
+    }
+</style>-->
 
 
 
@@ -16,6 +20,7 @@ This repository will actually serve as an aid to help you get started with your 
 * [Onshape: Multipart Cylinder](#MultipartCylinder)
 * [Onshape: V Block](#VBlock)
 * [Onshape: Alignment Plate](#AlignmentPlate)
+* [Onshape: Microphone Stand](#MicrophoneStand)
 ---
 
 
@@ -301,17 +306,21 @@ This piece was much easier than the other Onshape challenges so far, as it was a
 This is another multipart assignment in which you simply follow the sketches in order to eventually achieve a certain result, in this case, a microphone stand (hence the name) which is modified through subsequent questions.
 
 ### Evidence
-![Assembly 1](https://github.com/Raffi-Chen/engr3/assets/143544930/b39da8e0-ef14-4278-8cd4-80cd8a445347)
-![Assembly 1 (1)](https://github.com/Raffi-Chen/engr3/assets/143544930/954c5c33-7bc0-488c-8717-da05116c5e0c)
-![Assembly 1 (2)](https://github.com/Raffi-Chen/engr3/assets/143544930/0b8317ff-8d88-4a76-a71c-c8cef708a2ad)
+<img src="https://github.com/Raffi-Chen/engr3/assets/143544930/b39da8e0-ef14-4278-8cd4-80cd8a445347" height="600"><br>
+Isometric view of part<br>
+<img src="https://github.com/Raffi-Chen/engr3/assets/143544930/954c5c33-7bc0-488c-8717-da05116c5e0c" height="300"><br>
+View with screw<br>
+<img src="https://github.com/Raffi-Chen/engr3/assets/143544930/0b8317ff-8d88-4a76-a71c-c8cef708a2ad" height="500"><br>
+Assembly view without post<br>
 
 
 ### Part Link 
-[Create a link to your Onshape document](https://cvilleschools.onshape.com/documents/003e413cee57f7ccccaa15c2/w/ea71050bb283bf3bf088c96c/e/c85ae532263d3b551e1795d0?renderMode=0&uiState=62d9b9d7883c4f335ec42021). Don't forget to turn on link sharing in your Onshape document so that others can see it. 
+<a href="https://cvilleschools.onshape.com/documents/291885c192991e3b50067efb/w/3dcd205d4c420829ad15136b/e/f6fed6615f5cb21381b85fdf?renderMode=0&uiState=65664252ed8d49509e55fdf7">Link to part</a>
 
 ### Reflection
-What went wrong / was challenging, how'd you figure it out, and what did you learn from that experience? Your goal for the reflection is to pass on knowledge that will make this assignment better or easier for the next person. Think about your audience for this one, which may be "future you" (when you realize you need some of this code in three months), me, or your college admission committee!
+In this piece, I had a few problems about mass. I wanted to be exact to the options provided so I could be completely sure I did it correctly, and my results were more than the tenths place off. For the base, for example, I did not initally cut out the hole at the bottom enough, significantly adding to the mass here. After changing it to 3 mm, the mass matched perfectly. Another part that needed improvement was the fillets in the middle of the mic holder, as I needed them to be parallel and line up. Since we wanted them to be 3 mm apart throughout, then I found that one circle was filleted 7 mm and one 10 mm to make up for the discrepancy of distance.
 
+One way I improved from previous assignments was to know to look carefully at parts and how they changed, which was extremely important on step 9, a question relying fully on part changes.
 
 
 
