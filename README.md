@@ -21,6 +21,7 @@ This repository will actually serve as an aid to help you get started with your 
 * [Onshape: V Block](#VBlock)
 * [Onshape: Alignment Plate](#AlignmentPlate)
 * [Onshape: Microphone Stand](#MicrophoneStand)
+* [Onshape: Pliers](#Pliers)
 ---
 
 
@@ -313,9 +314,8 @@ View with screw<br>
 <img src="https://github.com/Raffi-Chen/engr3/assets/143544930/0b8317ff-8d88-4a76-a71c-c8cef708a2ad" height="500"><br>
 Assembly view without post<br>
 
-
 ### Part Link 
-<a href="https://cvilleschools.onshape.com/documents/291885c192991e3b50067efb/w/3dcd205d4c420829ad15136b/e/f6fed6615f5cb21381b85fdf?renderMode=0&uiState=65664252ed8d49509e55fdf7">Link to part</a>
+<a href="https://cvilleschools.onshape.com/documents/291885c192991e3b50067efb/w/3dcd205d4c420829ad15136b/e/f6fed6615f5cb21381b85fdf?renderMode=0&uiState=65664252ed8d49509e55fdf7">Link to part document</a>
 
 ### Reflection
 In this piece, I had a few problems about mass. I wanted to be exact to the options provided so I could be completely sure I did it correctly, and my results were more than the tenths place off. For the base, for example, I did not initally cut out the hole at the bottom enough, significantly adding to the mass here. After changing it to 3 mm, the mass matched perfectly. Another part that needed improvement was the fillets in the middle of the mic holder, as I needed them to be parallel and line up. Since we wanted them to be 3 mm apart throughout, then I found that one circle was filleted 7 mm and one 10 mm to make up for the discrepancy of distance.
@@ -325,6 +325,23 @@ One way I improved from previous assignments was to know to look carefully at pa
 
 
 
+
+## Pliers
+
+### Assignment Description
+The purpose of this assignment is to follow the sketches and utilize the parts given in order to create an interconnected assembly with the parts and answer questions about this assembly.
+
+### Evidence
+![Assembly 1 (4)](https://github.com/Raffi-Chen/engr3/assets/143544930/98441b2b-0d72-47a7-8257-89e0b4e7eb2f)<br>
+Isometric view of assembly<br>
+![Assembly 1 (5)](https://github.com/Raffi-Chen/engr3/assets/143544930/54368bae-166e-4d2d-95a0-cdfbb9f49a4d)<br>
+Same part, adjusted angles<br>
+
+### Part Link 
+<a href="https://cvilleschools.onshape.com/documents/6620e2e311f893dace40c32e/w/0d7cadc967ec9c42ab1f9413/e/778dca4b37ed80e49ca6bb6d?renderMode=0&uiState=659466c1ba37b256d8964c45">Link to part document</a>
+
+### Reflection
+Initially, I was confused how to connect the parts in order to make them work together (i.e. whether to use the revolute or fastened mate). Eventually, I realized that it was necessary to read between the lines in order for circular parts to rotate (revolute mate) and straight parts to stay fixed (fastened mate). Additionally, I did not initially know how to solve the questions where the angles were adjusted. I then realized that particular assembly features, like fastened mate, parallel, and distance, could be used for coincident, parallel, and offset, respectively.
 
 <!--
 
