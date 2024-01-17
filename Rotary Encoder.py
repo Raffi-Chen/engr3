@@ -22,9 +22,10 @@ button.direction = digitalio.Direction.INPUT # Establishes button input
 button.pull = digitalio.Pull.UP
 button_state = None
 
+lcd.print("!23123") # Prints value to LCD screen
+
 while True:
 
-    lcd.print("!23123") # Prints value to LCD screen
     led[0] = (255, 0, 0) # Projects certain color to LED
 
     if not button.value and button_state is None: # If button value is NOT 0 (if it is 1/pressed)
