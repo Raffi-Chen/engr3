@@ -4,8 +4,6 @@ import neopixel
 import digitalio
 from lcd.lcd import LCD # importing lcd stuff below
 from lcd.i2c_pcf8574_interface import I2CPCF8574Interface
-#import busio
-import time
 
 enc = rotaryio.IncrementalEncoder(board.D4, board.D3, divisor=2)
 
@@ -14,13 +12,13 @@ lcd = LCD(I2CPCF8574Interface(board.I2C(),0x27),num_rows=2,num_cols=16)
 #i2c = busio.I2C(board.SCL,board.SDA)
 
 led = neopixel.NeoPixel(board.NEOPIXEL,1)
-led.brightness = 0.1
+led.brightness = 0.05
 # Establishes properties of neopixel
 
 button = digitalio.DigitalInOut(board.D2) # Establishes communication with 2nd pin
 button.direction = digitalio.Direction.INPUT # Establishes button input
 button.pull = digitalio.Pull.UP
-button_state = None
+button_state = 0
 
 menu = ["stop         ", "caution         ", "go          "]
 
@@ -35,19 +33,23 @@ while True:
     lcd.set_cursor_pos(0,0)
     lcd.print(menu[menu_index_lcd])
 
-    if button.value and button_state == "pressed":
-
-        if menu_index is 0:
+    if button.value and button_state == 0:
+        print(f"Menu Index = {menu_index_lcd}")
+        button_state = 1
+        if menu_index_lcd is 0:
 
             led[0] = (255, 0, 0)
 
-        if menu_index is 1:
+        if menu_index_lcd is 1:
 
             led[0] = (255, 255, 0)
 
-        if menu_index is 2:
+        if menu_index_lcd is 2:
 
             led[0] = (0, 255, 0)
+
+    elif not button.value:
+        button_state = 0
 
 #-------------------------------------
 
