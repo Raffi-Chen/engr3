@@ -14,7 +14,7 @@ lcd = LCD(I2CPCF8574Interface(board.I2C(),0x27),num_rows=2,num_cols=16)
 #i2c = busio.I2C(board.SCL,board.SDA)
 
 led = neopixel.NeoPixel(board.NEOPIXEL,1)
-led.brightness = 0.3
+led.brightness = 0.1
 # Establishes properties of neopixel
 
 button = digitalio.DigitalInOut(board.D2) # Establishes communication with 2nd pin
@@ -22,34 +22,32 @@ button.direction = digitalio.Direction.INPUT # Establishes button input
 button.pull = digitalio.Pull.UP
 button_state = None
 
-menu = ["stop", "caution", "go"]
+menu = ["stop         ", "caution         ", "go          "]
 
 last_index = None
 menu_index = 0
-menu_index = enc.position
-menu_index_lcd = menu_index % 3
 
 while True:
- #   print(menu[menu_index_lcd])
+
+    menu_index = enc.position
+    menu_index_lcd = menu_index % 3
+
+    lcd.set_cursor_pos(0,0)
+    lcd.print(menu[menu_index_lcd])
+
     if button.value and button_state == "pressed":
 
         if menu_index is 0:
 
             led[0] = (255, 0, 0)
-            print(menu[menu_index_lcd])
-            lcd.print(menu[menu_index_lcd])
 
         if menu_index is 1:
 
             led[0] = (255, 255, 0)
-            print(menu[menu_index_lcd])
-            lcd.print(menu[menu_index_lcd])
 
         if menu_index is 2:
 
             led[0] = (0, 255, 0)
-            print(menu[menu_index_lcd])
-            lcd.print(menu[menu_index_lcd])
 
 #-------------------------------------
 
