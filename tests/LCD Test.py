@@ -1,10 +1,10 @@
-import time
 import board
-import adafruit_character_lcd.character_lcd_i2c as character_lcd
+import rotaryio
+from lcd.lcd import LCD # importing lcd stuff below
+from lcd.i2c_pcf8574_interface import I2CPCF8574Interface
 
-i2c = board.I2C()  # uses board.SCL and board.SDA
-lcd = character_lcd.Character_LCD_I2C(i2c, 16, 2)
+enc = rotaryio.IncrementalEncoder(board.D4, board.D3, divisor=2)
 
-lcd.message = "Hello, world!"
-time.sleep(5)
-lcd.clear()
+lcd = LCD(I2CPCF8574Interface(board.I2C(),0x27),num_rows=2,num_cols=16)
+
+lcd.print("Hello World!")
