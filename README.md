@@ -11,6 +11,8 @@
 This repository will actually serve as an aid to help you get started with your own template.  You should copy the raw form of this readme into your own, and use this template to write your own.  If you want to draw inspiration from other classmates, feel free to check [this directory of all students!](https://github.com/chssigma/Class_Accounts).
 ## Table of Contents
 * [Table of Contents](#TableOfContents)
+
+### Engineering III
 * [Arduino: RGB LED](#RGBLED)
 * [Arduino: CircuitPython Servo](#CircuitPythonServo)
 * [Arduino: Distance Sensor](#DistanceSensor)
@@ -22,6 +24,7 @@ This repository will actually serve as an aid to help you get started with your 
 * [Onshape: Alignment Plate](#AlignmentPlate)
 * [Onshape: Microphone Stand](#MicrophoneStand)
 * [Onshape: Pliers](#Pliers)
+* [Arduino: Rotary Encoder](#RotaryEncoder)
 ---
 
 
@@ -342,6 +345,60 @@ Same part, adjusted angles<br>
 
 ### Reflection
 Initially, I was confused how to connect the parts in order to make them work together (i.e. whether to use the revolute or fastened mate). Eventually, I realized that it was necessary to read between the lines in order for circular parts to rotate (revolute mate) and straight parts to stay fixed (fastened mate). Additionally, I did not initially know how to solve the questions where the angles were adjusted. I then realized that particular assembly features, like fastened mate, parallel, and distance, could be used for coincident, parallel, and offset, respectively.
+
+
+
+
+
+## RotaryEncoder
+
+### Description & Code Snippets
+For this assignment, a rotary encoder was to be in control of an LCD screen, alternating between "Stop," "Caution," and "Go" and projecting each color (corresponding to the traffic light) onto the Metro's neopixel by pressing the button of the rotary encoder. I used a slide deck prepared by Ms. Gibson and Mr. Miller's help, as well as my previous documentation in order to complete this assignment.
+
+In this assignment, I learned many skills to use a rotary encoder and LCD screen in CircuitPython.
+
+```python
+import rotaryio # Imports value of rotary encoder's turning function to use later
+from lcd.lcd import LCD # importing lcd stuff below
+from lcd.i2c_pcf8574_interface import I2CPCF8574Interface
+
+enc = rotaryio.IncrementalEncoder(board.D4, board.D3, divisor=2) # Establishes pins of rotary encoder
+
+menu = ["stop         ", "caution         ", "go          "] # Used for menu later
+
+menu_index = 0
+
+while True:
+
+    menu_index = enc.position # Menu index is what encoder reads
+    menu_index_lcd = menu_index % 3 # Finds remainder of # to read only 1, 2, or 3
+
+    lcd.set_cursor_pos(0,0)
+    lcd.print(menu[menu_index_lcd]) # Initiates + displays LCD values "stop", "caution", "go"
+
+    if button.value and button_state == 0:
+
+        if menu_index_lcd is 0:
+
+            led[0] = (255, 0, 0)
+
+    elif not button.value:
+
+        button_state = 0 # Button is not pressed if not pressed
+```
+
+If you want to see the full code, it can be found <a href="https://github.com/Raffi-Chen/engr3/blob/main/Rotary%20Encoder.py">here</a>
+ 
+### Evidence
+
+
+### Wiring
+[tinkercad.com](https://www.tinkercad.com/learn/circuits).  If you can't find the particular part you need, get creative, and just drop a note into the circuit diagram, explaining.
+For example, I use an Arduino Uno to represent my Circuitpython device but write a note saying which board I'm actually using.
+Then post an image here.   [Here's a quick tutorial for all markdown code, like making links](https://guides.github.com/features/mastering-markdown/)
+### Reflection
+Don't just tell the reader what went wrong or was challenging!  Describe how you figured it out, share the things that helped you succeed (tutorials, other people's repos, etc.), and then share what you learned from that experience.  **Your underlying goal for the reflection, is to concisely pass on the RIGHT knowledge that will help the reader recreate this assignment better or more easily.  Pass on your wisdom!**
+
 
 <!--
 
