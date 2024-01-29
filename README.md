@@ -390,14 +390,18 @@ while True:
 If you want to see the full code, it can be found <a href="https://github.com/Raffi-Chen/engr3/blob/main/Rotary%20Encoder.py">here</a>
  
 ### Evidence
-
+https://github.com/Raffi-Chen/engr3/assets/143544930/6132dc27-5cf3-4f94-8170-3083129aa93c
 
 ### Wiring
-[tinkercad.com](https://www.tinkercad.com/learn/circuits).  If you can't find the particular part you need, get creative, and just drop a note into the circuit diagram, explaining.
-For example, I use an Arduino Uno to represent my Circuitpython device but write a note saying which board I'm actually using.
-Then post an image here.   [Here's a quick tutorial for all markdown code, like making links](https://guides.github.com/features/mastering-markdown/)
+![WIN_20240129_15_19_19_Pro](https://github.com/Raffi-Chen/engr3/assets/143544930/0a5ff063-6a89-4fd5-b756-c6300623cc45)
+The large board depicted represents the microcontroller.
+
 ### Reflection
-Don't just tell the reader what went wrong or was challenging!  Describe how you figured it out, share the things that helped you succeed (tutorials, other people's repos, etc.), and then share what you learned from that experience.  **Your underlying goal for the reflection, is to concisely pass on the RIGHT knowledge that will help the reader recreate this assignment better or more easily.  Pass on your wisdom!**
+This assignment was particularly frustrating, as it was the first assignment in a long time featuring my fragmentary CircuitPython knowledge. Initially, I didn't even read the end goal / description of the assignment, going thorough the slide deck blindly and only hoping to get it finished. At this point, I wired all of my pieces based on my old documentation, which was a useful step even if I didn't realize it. 
+
+I inserted much of the code from the slides, but lots of it turned out to be slightly faulty or up to interpretation. For example, I didn't realize that the LCD backpack scan code was used to find what library the LCD is used for, and instead was trying to use it to activate the LCD. This could be done by paraphrasing LCD code give further on the slide, as well as using code libraries to find basic LCD commands. The button's code was mostly given in the slide, and the rotary encoder code was partly given on the slide. However, I also had to ask Mr. Miller for help to get to my final goal. After writing this reflection, I'm realizing that I should use other people's documentation and reflections to aid my own Engineering knowledge - it's written to teach someone else, after all.
+
+
 
 
 <!--
