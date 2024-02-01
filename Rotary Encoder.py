@@ -11,7 +11,7 @@ lcd = LCD(I2CPCF8574Interface(board.I2C(),0x27),num_rows=2,num_cols=16)
 # Begin communication with LCD screen
 
 led = neopixel.NeoPixel(board.NEOPIXEL,1)
-led.brightness = 0.1
+led.brightness = 1
 # Establishes properties of neopixel
 
 button = digitalio.DigitalInOut(board.D2) # Establishes communication with 2nd pin
