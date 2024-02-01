@@ -11,6 +11,8 @@
 This repository will actually serve as an aid to help you get started with your own template.  You should copy the raw form of this readme into your own, and use this template to write your own.  If you want to draw inspiration from other classmates, feel free to check [this directory of all students!](https://github.com/chssigma/Class_Accounts).
 ## Table of Contents
 * [Table of Contents](#TableOfContents)
+
+### Engineering III
 * [Arduino: RGB LED](#RGBLED)
 * [Arduino: CircuitPython Servo](#CircuitPythonServo)
 * [Arduino: Distance Sensor](#DistanceSensor)
@@ -22,6 +24,7 @@ This repository will actually serve as an aid to help you get started with your 
 * [Onshape: Alignment Plate](#AlignmentPlate)
 * [Onshape: Microphone Stand](#MicrophoneStand)
 * [Onshape: Pliers](#Pliers)
+* [Arduino: Rotary Encoder](#RotaryEncoder)
 ---
 
 
@@ -342,6 +345,64 @@ Same part, adjusted angles<br>
 
 ### Reflection
 Initially, I was confused how to connect the parts in order to make them work together (i.e. whether to use the revolute or fastened mate). Eventually, I realized that it was necessary to read between the lines in order for circular parts to rotate (revolute mate) and straight parts to stay fixed (fastened mate). Additionally, I did not initially know how to solve the questions where the angles were adjusted. I then realized that particular assembly features, like fastened mate, parallel, and distance, could be used for coincident, parallel, and offset, respectively.
+
+
+
+
+
+## RotaryEncoder
+
+### Description & Code Snippets
+For this assignment, a rotary encoder was to be in control of an LCD screen, alternating between "Stop," "Caution," and "Go" and projecting each color (corresponding to the traffic light) onto the Metro's neopixel by pressing the button of the rotary encoder. I used a slide deck prepared by Ms. Gibson and Mr. Miller's help, as well as my previous documentation in order to complete this assignment.
+
+In this assignment, I learned many skills to use a rotary encoder and LCD screen in CircuitPython.
+
+```python
+import rotaryio # Imports value of rotary encoder's turning function to use later
+from lcd.lcd import LCD # importing lcd stuff below
+from lcd.i2c_pcf8574_interface import I2CPCF8574Interface
+
+enc = rotaryio.IncrementalEncoder(board.D4, board.D3, divisor=2) # Establishes pins of rotary encoder
+
+menu = ["stop         ", "caution         ", "go          "] # Used for menu later
+
+menu_index = 0
+
+while True:
+
+    menu_index = enc.position # Menu index is what encoder reads
+    menu_index_lcd = menu_index % 3 # Finds remainder of # to read only 1, 2, or 3
+
+    lcd.set_cursor_pos(0,0)
+    lcd.print(menu[menu_index_lcd]) # Initiates + displays LCD values "stop", "caution", "go"
+
+    if button.value and button_state == 0:
+
+        if menu_index_lcd is 0:
+
+            led[0] = (255, 0, 0)
+
+    elif not button.value:
+
+        button_state = 0 # Button is not pressed if not pressed
+```
+
+If you want to see the full code, it can be found <a href="https://github.com/Raffi-Chen/engr3/blob/main/Rotary%20Encoder.py">here</a>
+ 
+### Evidence
+https://github.com/Raffi-Chen/engr3/assets/143544930/6132dc27-5cf3-4f94-8170-3083129aa93c
+
+### Wiring
+![WIN_20240129_15_19_19_Pro](https://github.com/Raffi-Chen/engr3/assets/143544930/0a5ff063-6a89-4fd5-b756-c6300623cc45)
+The large board depicted represents the microcontroller.
+
+### Reflection
+This assignment was particularly frustrating, as it was the first assignment in a long time featuring my fragmentary CircuitPython knowledge. Initially, I didn't even read the end goal / description of the assignment, going thorough the slide deck blindly and only hoping to get it finished. At this point, I wired all of my pieces based on my old documentation, which was a useful step even if I didn't realize it. 
+
+I inserted much of the code from the slides, but lots of it turned out to be slightly faulty or up to interpretation. For example, I didn't realize that the LCD backpack scan code was used to find what library the LCD is used for, and instead was trying to use it to activate the LCD. This could be done by paraphrasing LCD code give further on the slide, as well as using code libraries to find basic LCD commands. The button's code was mostly given in the slide, and the rotary encoder code was partly given on the slide. However, I also had to ask Mr. Miller for help to get to my final goal. After writing this reflection, I'm realizing that I should use other people's documentation and reflections to aid my own Engineering knowledge - it's written to teach someone else, after all.
+
+
+
 
 <!--
 
