@@ -25,6 +25,7 @@ This repository will actually serve as an aid to help you get started with your 
 * [Onshape: Microphone Stand](#MicrophoneStand)
 * [Onshape: Pliers](#Pliers)
 * [Arduino: Rotary Encoder](#RotaryEncoder)
+* [Arduino: Photointerrupters](#Photointerrupters)
 ---
 
 
@@ -358,13 +359,6 @@ For this assignment, a rotary encoder was to be in control of an LCD screen, alt
 In this assignment, I learned many skills to use a rotary encoder and LCD screen in CircuitPython.
 
 ```python
-import rotaryio # Imports value of rotary encoder's turning function to use later
-from lcd.lcd import LCD # importing lcd stuff below
-from lcd.i2c_pcf8574_interface import I2CPCF8574Interface
-
-enc = rotaryio.IncrementalEncoder(board.D4, board.D3, divisor=2) # Establishes pins of rotary encoder
-
-menu = ["stop         ", "caution         ", "go          "] # Used for menu later
 
 menu_index = 0
 
@@ -400,6 +394,48 @@ The large board depicted represents the microcontroller.
 This assignment was particularly frustrating, as it was the first assignment in a long time featuring my fragmentary CircuitPython knowledge. Initially, I didn't even read the end goal / description of the assignment, going thorough the slide deck blindly and only hoping to get it finished. At this point, I wired all of my pieces based on my old documentation, which was a useful step even if I didn't realize it. 
 
 I inserted much of the code from the slides, but lots of it turned out to be slightly faulty or up to interpretation. For example, I didn't realize that the LCD backpack scan code was used to find what library the LCD is used for, and instead was trying to use it to activate the LCD. This could be done by paraphrasing LCD code give further on the slide, as well as using code libraries to find basic LCD commands. The button's code was mostly given in the slide, and the rotary encoder code was partly given on the slide. However, I also had to ask Mr. Miller for help to get to my final goal. After writing this reflection, I'm realizing that I should use other people's documentation and reflections to aid my own Engineering knowledge - it's written to teach someone else, after all.
+
+
+
+
+
+## Photointerrupters
+
+### Description & Code Snippets
+In this assignment, an LCD screen must keep track of how many times a photointerrupter is blocked. The code for this assignment is scaffolded off Ms. Gibson's pseudocode, and the wiring can be borrowed from previous documentation if necessary.
+
+```python
+
+while True:
+    if (now + 4) < time.monotonic(): # If 4 seconds elapses
+
+        lcd.set_cursor_pos(0,0) # Repeats line 18-21 with updated interrupt_counter value
+        lcd.print("Interrupt Count:")
+        lcd.set_cursor_pos(1,0)
+        lcd.print(str(interrupt_counter))
+
+    if photointerrupter.value == True:
+        if photointerrupter_state == 0: # If photointerrupter interrupted, set photointerrupter_state to "interrupted"
+
+            photointerrupter_state = 1
+            interrupt_counter = interrupt_counter + 1 # adds to interrupt count by 1 if photointerrupter was previusly 0
+    
+    else:
+        photointerrupter_state = 0 # if not covered, photointerrupter_state goes back to 0
+```
+
+The link to the full code can be found <a href="https://github.com/Raffi-Chen/engr3/blob/main/Photointerrupters.py">here</a>
+
+### Evidence
+https://github.com/Raffi-Chen/engr3/assets/143544930/7fa9ba40-dffd-4fbe-a613-b1282f53e3ce
+
+### Wiring
+![Powerful Trug](https://github.com/Raffi-Chen/engr3/assets/143544930/6a9ce5f3-53b9-41b7-aceb-baaec7dbbc5c)
+For the wiring diagrams, I used <a href="tinkercad.com">TinkerCAD</a>. 
+Substitutions: I used an Arduino Uno for my Metro M4, and a slideswitch instead of a photointerrupter.
+
+### Reflection
+Don't just tell the reader what went wrong or was challenging!  Describe how you figured it out, share the things that helped you succeed (tutorials, other people's repos, etc.), and then share what you learned from that experience.  **Your underlying goal for the reflection, is to concisely pass on the RIGHT knowledge that will help the reader recreate this assignment better or more easily.  Pass on your wisdom!**
 
 
 
