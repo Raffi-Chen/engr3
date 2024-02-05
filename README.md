@@ -435,8 +435,7 @@ For the wiring diagrams, I used <a href="tinkercad.com">TinkerCAD</a>.
 Substitutions: I used an Arduino Uno for my Metro M4, and a slideswitch instead of a photointerrupter.
 
 ### Reflection
-Don't just tell the reader what went wrong or was challenging!  Describe how you figured it out, share the things that helped you succeed (tutorials, other people's repos, etc.), and then share what you learned from that experience.  **Your underlying goal for the reflection, is to concisely pass on the RIGHT knowledge that will help the reader recreate this assignment better or more easily.  Pass on your wisdom!**
-
+This assignment is much more straightforward than the previous assignment, as the pseudocode is given. I also had the LCD from the previous assignment, further simplifying things. However, when I got into the nuts and bolts of the code, I did run into some actual problems. I was particularly confused by the arrangement of loops, as well as the meaning of time.monotonic. Apparently, the statement if (now + 4) < time.monotonic(): simply represented, in plain english, "if time is 4 more than I think time is, then update the program." My problem about the loops was offsetted by creating two if{ loops: one with all the information concerning the photointerrupters, and one concerning everything else. Additionally, I had a problem where the photointerrupter was constantly shooting 1s (reading something). I eliminated this repetition of readings by improving the photointerrupter loop. Essentially, the improved version states, in plain english, "if the photointerrupter was blocked and was not before, read once and then set to 'not read' if taken off".
 
 
 
