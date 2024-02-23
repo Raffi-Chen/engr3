@@ -26,6 +26,7 @@ This repository will actually serve as an aid to help you get started with your 
 * [Onshape: Pliers](#Pliers)
 * [Arduino: Rotary Encoder](#RotaryEncoder)
 * [Arduino: Photointerrupters](#Photointerrupters)
+* [Arduino: Stepper Motors](#StepperMotors)
 ---
 
 
@@ -436,6 +437,48 @@ Substitutions: I used an Arduino Uno for my Metro M4, and a slideswitch instead 
 
 ### Reflection
 This assignment is much more straightforward than the previous assignment, as the pseudocode is given. I also had the LCD from the previous assignment, further simplifying things. However, when I got into the nuts and bolts of the code, I did run into some actual problems. I was particularly confused by the arrangement of loops, as well as the meaning of time.monotonic. Apparently, the statement if (now + 4) < time.monotonic(): simply represented, in plain english, "if time is 4 more than I think time is, then update the program." My problem about the loops was offsetted by creating two if{ loops: one with all the information concerning the photointerrupters, and one concerning everything else. Additionally, I had a problem where the photointerrupter was constantly shooting 1s (reading something). I eliminated this repetition of readings by improving the photointerrupter loop. Essentially, the improved version states, in plain english, "if the photointerrupter was blocked and was not before, read once and then set to 'not read' if taken off".
+
+
+
+
+
+## StepperMotors
+
+### Description & Code Snippets
+The goal of this assignment is to use a stepper motor to be able to continuously loop, using a limit switch to make it turn 180 degrees. To achieve this, the code tutorials from Ms. Gibson's code can be utilized
+
+This function was new to me because it involved async, which I didn't fully understand until doing this assignment. It also involved controlling both a stepper motor and a limit switch to make the assignment function.
+
+```python
+from adafruit_motor import stepper # imports stepper motor
+
+DELAY = 0.01
+STEPS = 100
+
+motor = stepper.StepperMotor(coils[0], coils[1], coils[2], coils[3], microsteps=None)
+ 
+async def catch_pin_transitions(pin): # Loop 1 responds to limit switch when pressed
+    with keypad.Keys((pin,), value_when_pressed=False) as keys:
+        while True:
+            event = keys.events.get()
+            if event:
+                if event.pressed:
+                    print("Limit Switch was pressed.")
+                    for step in range(STEPS):
+                        motor.onestep(direction=stepper.BACKWARD, style=stepper.DOUBLE) # Tells stepper motor to move backwards
+                        time.sleep(DELAY)
+```
+
+Link to code: <a href="https://github.com/Raffi-Chen/engr3/blob/main/StepperMotors.py">https://github.com/Raffi-Chen/engr3/blob/main/StepperMotors.py</a>
+
+### Evidence
+
+### Wiring
+[tinkercad.com](https://www.tinkercad.com/learn/circuits).  If you can't find the particular part you need, get creative, and just drop a note into the circuit diagram, explaining.
+For example, I use an Arduino Uno to represent my Circuitpython device but write a note saying which board I'm actually using.
+Then post an image here.   [Here's a quick tutorial for all markdown code, like making links](https://guides.github.com/features/mastering-markdown/)
+### Reflection
+Don't just tell the reader what went wrong or was challenging!  Describe how you figured it out, share the things that helped you succeed (tutorials, other people's repos, etc.), and then share what you learned from that experience.  **Your underlying goal for the reflection, is to concisely pass on the RIGHT knowledge that will help the reader recreate this assignment better or more easily.  Pass on your wisdom!**
 
 
 
