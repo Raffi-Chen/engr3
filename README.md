@@ -472,13 +472,15 @@ async def catch_pin_transitions(pin): # Loop 1 responds to limit switch when pre
 Link to code: <a href="https://github.com/Raffi-Chen/engr3/blob/main/StepperMotors.py">https://github.com/Raffi-Chen/engr3/blob/main/StepperMotors.py</a>
 
 ### Evidence
+https://github.com/Raffi-Chen/engr3/assets/143544930/006c3546-710a-4c78-b5bb-10644ff9ff5e
 
 ### Wiring
-[tinkercad.com](https://www.tinkercad.com/learn/circuits).  If you can't find the particular part you need, get creative, and just drop a note into the circuit diagram, explaining.
-For example, I use an Arduino Uno to represent my Circuitpython device but write a note saying which board I'm actually using.
-Then post an image here.   [Here's a quick tutorial for all markdown code, like making links](https://guides.github.com/features/mastering-markdown/)
+![WIN_20240226_15_35_47_Pro](https://github.com/Raffi-Chen/engr3/assets/143544930/9c6f6295-5e8a-4131-9526-36267d246c53)
+
 ### Reflection
-Don't just tell the reader what went wrong or was challenging!  Describe how you figured it out, share the things that helped you succeed (tutorials, other people's repos, etc.), and then share what you learned from that experience.  **Your underlying goal for the reflection, is to concisely pass on the RIGHT knowledge that will help the reader recreate this assignment better or more easily.  Pass on your wisdom!**
+At first, I simply started with Ms. Gibson's tutorial to get a general feel for the project. This worked for all of the parts and turned out easier than I expected at first. However, my major difficulty with this assignment was the code, when I tried to start putting everything together. Eventually, Mr. Miller helped me realize that the async def functions helped run multiple things at the same time, through a pseudo-simultaneous sequence of flashing between many loops at the same time. These loops were the constant running of the motor, the press and release to shift direction, and one to run the asyncio and do both functions at the same time. After working through these two simple commands, the assignmment was, for the most part, complete, reminding me that I should remember to break work down in chunks rather than finishing it quickly all at one time.
+
+
 
 
 
