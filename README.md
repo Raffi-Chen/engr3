@@ -27,6 +27,7 @@ This repository will actually serve as an aid to help you get started with your 
 * [Arduino: Rotary Encoder](#RotaryEncoder)
 * [Arduino: Photointerrupters](#Photointerrupters)
 * [Arduino: Stepper Motors](#StepperMotors)
+* [Arduino: IR Sensors](#IRSensors)
 ---
 
 
@@ -480,6 +481,45 @@ https://github.com/Raffi-Chen/engr3/assets/143544930/006c3546-710a-4c78-b5bb-106
 ### Reflection
 At first, I simply started with Ms. Gibson's tutorial to get a general feel for the project. This worked for all of the parts and turned out easier than I expected at first. However, my major difficulty with this assignment was the code, when I tried to start putting everything together. Eventually, Mr. Miller helped me realize that the async def functions helped run multiple things at the same time, through a pseudo-simultaneous sequence of flashing between many loops at the same time. These loops were the constant running of the motor, the press and release to shift direction, and one to run the asyncio and do both functions at the same time. After working through these two simple commands, the assignmment was, for the most part, complete, reminding me that I should remember to break work down in chunks rather than finishing it quickly all at one time.
 
+
+
+
+
+## IRSensors
+
+### Description & Code Snippets
+This assignment was used to learn how to use IR sensors, and it simply needed to turn the board's neopixel green when not blocked, and red when blocked. Ms. Gibson's tutorial essentially had everything except for the basics, helping to master the basics of CircuitPython.
+
+In terms of code, I learned how to initiate and use an IR sensor as well as reviewing the use of the neopixel.
+
+```python
+import neopixel
+import digitalio
+
+# Set up the IR Sensor using digital pin 2.
+ir_sensor = digitalio.DigitalInOut(board.D2)
+
+# Set the photointerrupter as an input.
+ir_sensor.direction = digitalio.Direction.INPUT 
+
+# While loop runs the code inside continuously.
+while True:
+    # If an object is near the IR sensor (sensor is LOW):
+    if ir_sensor.value is False:
+        # Set Neopixel color to RED
+        led[0] = (255,0,0)
+```
+You can find the full code here: <a href="https://github.com/Raffi-Chen/engr3/blob/main/IR%20Sensors.py">https://github.com/Raffi-Chen/engr3/blob/main/IR%20Sensors.py</a>
+
+### Evidence
+https://github.com/Raffi-Chen/engr3/assets/143544930/39905ffe-0d60-4a67-bbbd-3a92b38d9e62
+
+### Wiring
+![gewagewagewagewgwa](https://github.com/Raffi-Chen/engr3/assets/143544930/50c13541-1221-451a-acba-2f13ed98ad03)
+For my wiring diagram, I used [tinkercad.com](https://www.tinkercad.com/learn/circuits). I substututed the Metro M4 for an Uno.
+
+### Reflection
+This assignment was much easier than I expected, as it was mostly application from previous CircuitPython assignments, which I am becoming more and more familiar with. Additionally, it was relatively simple, especially the wiring, which only involved one component. One of my struggles was that I was still in "arduino mode" in terms of code, almost making up code in some sections because I didn't know the precise notation for each section. For example, on line 21, I wrote ir_sensor is LOW, forgetting that it needed to be a .value to represent a 0 or a 1, and I also wrote LOW instead of False, which is the correct notation for 0/1 (True/False). I also put an equals sign after my print statements. Although these errors were relatively close to the actual fix, they showed how much precision was necessary for code. However, with the right dedication, the fix is always right around the corner - it's simply a matter of pinpointing what to fix!
 
 
 
