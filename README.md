@@ -28,6 +28,7 @@ This repository will actually serve as an aid to help you get started with your 
 * [Arduino: Photointerrupters](#Photointerrupters)
 * [Arduino: Stepper Motors](#StepperMotors)
 * [Arduino: IR Sensors](#IRSensors)
+* [Onshape: Robot Gripper](#RobotGripper)
 ---
 
 
@@ -521,6 +522,25 @@ For my wiring diagram, I used [tinkercad.com](https://www.tinkercad.com/learn/ci
 ### Reflection
 This assignment was much easier than I expected, as it was mostly application from previous CircuitPython assignments, which I am becoming more and more familiar with. Additionally, it was relatively simple, especially the wiring, which only involved one component. One of my struggles was that I was still in "arduino mode" in terms of code, almost making up code in some sections because I didn't know the precise notation for each section. For example, on line 21, I wrote ir_sensor is LOW, forgetting that it needed to be a .value to represent a 0 or a 1, and I also wrote LOW instead of False, which is the correct notation for 0/1 (True/False). I also put an equals sign after my print statements. Although these errors were relatively close to the actual fix, they showed how much precision was necessary for code. However, with the right dedication, the fix is always right around the corner - it's simply a matter of pinpointing what to fix!
 
+
+
+
+
+## RobotGripper
+
+### Assignment Description
+This is intended as preparation for the Robot Arm project, so that I can have a base idea of how my robot arm will function before a more complex project involving this arm. In order to create the robot arm, it should be sketched with basic emulations of realistic, intended dimensions as well as holes to attach nuts and bolts. It should be able to fully close and come with an assembly and simulation.
+
+### Evidence
+![Assembly 1 (6)](https://github.com/Raffi-Chen/engr3/assets/143544930/397c0cd1-80dc-48e8-8306-af38ecd5a894) Isometric view of arm
+![Assembly 1 (7)](https://github.com/Raffi-Chen/engr3/assets/143544930/99322919-3446-4d65-977a-9131b8b6b7cc) Opened arm from front view
+![Assembly 1 (8)](https://github.com/Raffi-Chen/engr3/assets/143544930/875709a0-f562-4d11-abd0-b9b22693dc40) Closed arm from back view
+
+### Part Link 
+<a href="https://cvilleschools.onshape.com/documents/057796055cd2d7638fe1e160/w/7c6c6bc64f761cb42595d24e/e/bbb8696a64a2ab37d9ef15bf?renderMode=0&uiState=65e8c7c8b6ae8632511f6997">Link to part document</a>
+
+### Reflection
+I used the bare minimum of my current Onshape knowledge to tread through this assignment. This worked for the most part, however, I ran into a few walls that had quick solutions. After creating an arm that encapsulated the general idea of the robot, I ran into the problem of setting the limits to be accurate to the opening of the robot. The solution to this was quite simple - I simply needed to check the slider mate and hit "limits". However, afterwards, I ran into some problems with the mating (to find accurate limits). To solve this, I played around with where the mates were fastened or planar, and where they were placed. (This is definitely something I'm still working on). I also did more work than I needed to with the standard content initially, but later realized that I could use the Replicate feature to do one thing in many different instances.
 
 
 
