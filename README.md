@@ -534,7 +534,10 @@ This is intended as preparation for the Robot Arm project, so that I can have a 
 ### Evidence
 ![Assembly 1 (6)](https://github.com/Raffi-Chen/engr3/assets/143544930/397c0cd1-80dc-48e8-8306-af38ecd5a894) Isometric view of arm
 ![Assembly 1 (7)](https://github.com/Raffi-Chen/engr3/assets/143544930/99322919-3446-4d65-977a-9131b8b6b7cc) Opened arm from front view
-![Assembly 1 (8)](https://github.com/Raffi-Chen/engr3/assets/143544930/875709a0-f562-4d11-abd0-b9b22693dc40) Closed arm from back view
+![Assembly 1 (8)](https://github.com/Raffi-Chen/engr3/assets/143544930/875709a0-f562-4d11-abd0-b9b22693dc40) Closed arm from back view<br>
+![trshstrhttrhrssttrtterrydfg vfhg](https://github.com/Raffi-Chen/engr3/assets/143544930/2a96d7f8-4cd4-4a92-b5ac-530073c2263d) <br>Bill of Materials
+
+
 
 ### Part Link 
 <a href="https://cvilleschools.onshape.com/documents/057796055cd2d7638fe1e160/w/7c6c6bc64f761cb42595d24e/e/bbb8696a64a2ab37d9ef15bf?renderMode=0&uiState=65e8c7c8b6ae8632511f6997">Link to part document</a>
