@@ -535,7 +535,11 @@ This is intended as preparation for the Robot Arm project, so that I can have a 
 ![Assembly 1 (6)](https://github.com/Raffi-Chen/engr3/assets/143544930/397c0cd1-80dc-48e8-8306-af38ecd5a894) Isometric view of arm
 ![Assembly 1 (7)](https://github.com/Raffi-Chen/engr3/assets/143544930/99322919-3446-4d65-977a-9131b8b6b7cc) Opened arm from front view
 ![Assembly 1 (8)](https://github.com/Raffi-Chen/engr3/assets/143544930/875709a0-f562-4d11-abd0-b9b22693dc40) Closed arm from back view<br>
-![trshstrhttrhrssttrtterrydfg vfhg](https://github.com/Raffi-Chen/engr3/assets/143544930/2a96d7f8-4cd4-4a92-b5ac-530073c2263d) <br>Bill of Materials
+![trshstrhttrhrssttrtterrydfg vfhg](https://github.com/Raffi-Chen/engr3/assets/143544930/2a96d7f8-4cd4-4a92-b5ac-530073c2263d) <br>Bill of Materials<br>
+https://github.com/Raffi-Chen/engr3/assets/143544930/8a08ecca-44b3-4d67-9381-16d77997fbd1 <br>Link to simulation <br>
+
+
+
 
 
 
